@@ -16,27 +16,19 @@ int main()
 		if (Turn == 0)
 		{
 			if (Lee.isAlive() && Thomas.isAlive())
-			{
-				Thomas.DoDamage(Lee);
-			}
+				Thomas.DoDamage(Lee, Thomas.getLightAttack());
 
 			if (Thomas.isAlive() && Lee.isAlive())
-			{
-				Lee.DoDamage(Thomas);
-			}
+				Lee.DoDamage(Thomas, Lee.getLightAttack());
 		}
 		
 		if (Turn == 1)
 		{
 			if (Thomas.isAlive() && Lee.isAlive())
-			{
-				Lee.DoDamage(Thomas);
-			}
+				Lee.DoDamage(Thomas, Lee.getLightAttack());
 
 			if (Lee.isAlive() && Thomas.isAlive())
-			{
-				Thomas.DoDamage(Lee);
-			}
+				Thomas.DoDamage(Lee, Thomas.getLightAttack());
 		}
 	}
 

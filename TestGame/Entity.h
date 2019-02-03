@@ -1,19 +1,22 @@
 #pragma once
-#include <cstdlib>
-#include <ctime>
+#include "Attack.h"
 
 class Entity
 {
 private:
 	int m_Health;
-	int m_Power;
+	int m_HealthLvl;
+	int m_LightAttack;
+	int m_NormalAttack;
+	int m_HeavyAttack;
+	Attack Assign;
 public:
 	Entity();
-	int baseLvl;
-	int healthLvl;
-	int powerLvl;
-	int DoDamage(Entity& other);
+	int DoDamage(Entity& other, int move);
 	bool isAlive();
 	int getHealth();
-	int getPower();
+	int getHealthLvl();
+	int getLightAttack();
+	int getNormalAttack();
+	int getHeavyAttack();
 };
